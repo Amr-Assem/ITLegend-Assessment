@@ -46,6 +46,10 @@ h6 {
   font-family: var(--heading-font);
 }
 
+.centered-shadow {
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.12);
+}
+
 /* ---------------------------------- Icons --------------------------------- */
 [class^="icon-"] {
   font-family: var(--icons-font) !important;
@@ -53,4 +57,36 @@ h6 {
 
 .icon-angle-right::before {
   content: "\f105";
+}
+
+.icon-facebook::before {
+  content: "\EA90";
+}
+
+.icon-twitter::before {
+  content: "\EA96";
+}
+
+.icon-linkedin::before {
+  content: "\EACA";
+}
+
+.icon-youtube::before {
+  content: "\EA9D";
+}
+
+.icon-duration::before {
+  content: "\E93C";
+}
+
+.icon-lessons::before {
+  content: url("/icons/lessons.svg");
+}
+
+.icon-enrolled::before {
+  content: "\E93E";
+}
+
+.icon-language::before {
+  content: "\E93A";
 }

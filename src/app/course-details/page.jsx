@@ -11,7 +11,7 @@ export default function CourseDetailsPage() {
       <TitleSection courseData={courseData} />
 
       <div
-        className="px-8 py-8 grid gap-16"
+        className="px-8 py-4 grid gap-16"
         style={{
           gridTemplateColumns: "60% auto",
           gridTemplateRows: "auto auto",

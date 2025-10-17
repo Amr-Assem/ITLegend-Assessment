@@ -3,7 +3,7 @@ import React from "react";
 
 export default function TitleSection({ courseData }) {
   return (
-    <div className="px-8 py-6 bg-[#F5F9FA]">
+    <div className="px-8 pt-4 pb-2 bg-[#F5F9FA]">
       {/* Breadcrumbs */}
       <div className="flex items-center gap-2 mb-4 text-sm">
         <Link href="/" className="hover:text-text-base">
@@ -18,7 +18,7 @@ export default function TitleSection({ courseData }) {
       </div>
 
       {/* Course Title */}
-      <h1 className="text-3xl font-bold text-text-base">{courseData.title}</h1>
+      <h1 className="text-3xl font-semibold text-text-base">{courseData.title}</h1>
     </div>
   );
 }
