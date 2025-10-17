@@ -10,7 +10,7 @@
 /* -------------------------------- Variables ------------------------------- */
 :root {
   --primary-base: #1ab69d;
-  --primary-hover: #4a8677;
+  --primary-hover: #179e88;
   --text-base: #181818;
   --text-muted: #808080;
   --background: #ffffff;
@@ -89,4 +89,8 @@ h6 {
 
 .icon-language::before {
   content: "\E93A";
+}
+
+.icon-arrow-right::before {
+  content: "\E903";
 }

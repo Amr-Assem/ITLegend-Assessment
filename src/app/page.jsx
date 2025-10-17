@@ -10,7 +10,7 @@ export default function Page() {
 
       {/* Button */}
       <Link href="/course-details">
-        <button className="bg-background px-8 py-4 text-lg font-medium transition-all hover:bg-primary-base hover:text-backgroundC cursor-pointer border-2 border-border">
+        <button className="bg-background rounded-sm px-8 py-4 text-lg font-medium transition-all hover:bg-primary-base hover:text-background cursor-pointer border border-border">
           Starting SEO as your Home-Based Business
         </button>
       </Link>
