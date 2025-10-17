@@ -94,3 +94,11 @@ h6 {
 .icon-arrow-right::before {
   content: "\E903";
 }
+
+.icon-chapter::before {
+  content: "\E940";
+}
+
+.icon-lock::before {
+  content: "\E943";
+}
