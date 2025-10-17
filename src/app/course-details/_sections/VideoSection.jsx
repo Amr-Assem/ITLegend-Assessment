@@ -2,13 +2,9 @@ import React from "react";
 
 export default function VideoSection({ courseData }) {
   return (
-    // TODO: Video Update
-    <div className="bg-background order-1">
-      {/* Video */}
-      <img src="/video.png" className="aspect-auto" />
-
+    <div className="bg-background order-3">
       {/* Icon Buttons Below Video */}
-      <div className="flex gap-3 py-8">
+      <div className="flex gap-3 pb-4">
         <button className="flex items-center justify-center w-10 h-10 border border-border hover:bg-primary-base hover:text-background cursor-pointer rounded-full">
           <span className="icon-facebook"></span>
         </button>
@@ -72,7 +68,7 @@ export default function VideoSection({ courseData }) {
           </div>
 
           {/* Column 2 (Duplicate) */}
-          <div className="flex flex-col gap-1 w-full">
+          <div className="hidden md:flex flex-col gap-1 w-full">
             <div className="flex items-center justify-between py-3 mx-3 border-b border-border">
               <div className="flex items-center gap-3">
                 <span className="icon-duration text-text-base text-xl"></span>

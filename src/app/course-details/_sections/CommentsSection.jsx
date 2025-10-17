@@ -5,7 +5,7 @@ export default function CommentsSection({ courseData }) {
   const [commentText, setCommentText] = useState("");
 
   return (
-    <div className="bg-background p-6 order-3">
+    <div className="bg-background p-6 order-4">
       <h2 className="text-3xl font-semibold">Comments</h2>
 
       {/* Comments List */}

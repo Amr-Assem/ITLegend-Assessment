@@ -10,12 +10,13 @@ export default function CourseDetailsPage() {
     <>
       <TitleSection courseData={courseData} />
 
-      <div
-        className="px-8 py-4 grid gap-16"
-        style={{
-          gridTemplateColumns: "60% auto",
-          gridTemplateRows: "auto auto",
-        }}>
+      <div className="px-8 py-4 grid course__grid">
+        {/* // TODO: Video Update */}
+        {/* Video */}
+        <img
+          src="/video.png"
+          className="aspect-auto sticky top-0 md:static z-2 order-1"
+        />
         <VideoSection courseData={courseData} />
         <CommentsSection courseData={courseData} />
         <ContentSection courseData={courseData} />
