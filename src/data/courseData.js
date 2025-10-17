@@ -20,12 +20,12 @@ export const courseData = {
             description:
                 "Advanced story telling techniques for writers: Personas, Characters & Plots",
             items: [
-                "Introduction",
-                "Course Overview",
-                "Course Overview",
-                "Course Exercise / Reference Files",
-                "Code Editor Installation (Optional if you have one)",
-                "Embedding PHP in HTML",
+                { title: "Introduction" },
+                { title: "Course Overview" },
+                { title: "Course Overview", quiz: { questions: 0, minutes: 10 } },
+                { title: "Course Exercise / Reference Files" },
+                { title: "Code Editor Installation (Optional if you have one)" },
+                { title: "Embedding PHP in HTML" },
             ],
         },
         {
@@ -34,12 +34,12 @@ export const courseData = {
             description:
                 "Advanced story telling techniques for writers: Personas, Characters & Plots",
             items: [
-                "Defining Functions",
-                "Function Parameters",
-                "Return Values From Functions",
-                "Global Variable and Scope",
-                "Newer Way of Creating a Constant",
-                "Constants",
+                { title: "Defining Functions" },
+                { title: "Function Parameters" },
+                { title: "Return Values From Functions", quiz: { questions: 2, minutes: 15 } },
+                { title: "Global Variable and Scope" },
+                { title: "Newer Way of Creating a Constant" },
+                { title: "Constants" },
             ],
         },
         {
@@ -48,12 +48,12 @@ export const courseData = {
             description:
                 "Advanced story telling techniques for writers: Personas, Characters & Plots",
             items: [
-                "Defining Functions",
-                "Function Parameters",
-                "Return Values From Functions",
-                "Global Variable and Scope",
-                "Newer Way of Creating a Constant",
-                "Constants",
+                { title: "Defining Functions" },
+                { title: "Function Parameters" },
+                { title: "Return Values From Functions", quiz: { questions: 2, minutes: 15 } },
+                { title: "Global Variable and Scope" },
+                { title: "Newer Way of Creating a Constant" },
+                { title: "Constants" },
             ],
         },
     ],

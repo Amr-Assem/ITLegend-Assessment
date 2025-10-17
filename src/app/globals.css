@@ -16,6 +16,10 @@
   --background: #ffffff;
   --border: #e5e5e5;
   --icons-font: "icomoon";
+  --success-base: #1ab69d;
+  --success-muted: #1ab69d12;
+  --error-base: #ee4a62;
+  --error-muted: #ee4a6312;
 }
 
 @theme inline {
@@ -25,6 +29,10 @@
   --color-text-muted: var(--text-muted);
   --color-background: var(--background);
   --color-border: var(--border);
+  --color-success-base: var(--success-base);
+  --color-success-muted: var(--success-muted);
+  --color-error-base: var(--error-base);
+  --color-error-muted: var(--error-muted);
   --font-sans: var(--body-font);
   --font-heading: var(--heading-font);
 }

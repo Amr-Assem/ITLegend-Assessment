@@ -47,17 +47,29 @@ export default function ContentSection({ courseData }) {
               {content.description}
             </p>
             <>
-              {content.items.map((item, index) => (
-                <div
-                  className="flex justify-between border-b border-border py-3 group transition-colors"
-                  key={index}>
-                  <div className="text-sm text-text-base group-hover:text-primary-hover cursor-default">
-                    <span className="icon-chapter pr-2"></span>
-                    {item}
+              {content.items.map((item, index) => {
+                const isString = typeof item === "string";
+                const title = isString ? item : item.title;
+                const quiz = isString ? undefined : item.quiz;
+                return (
+                  <div
+                    className="flex justify-between items-center gap-2 border-b border-border py-3 group transition-colors"
+                    key={index}>
+                    <div className="text-sm text-text-base group-hover:text-primary-hover cursor-default">
+                      <span className="icon-chapter pr-2"></span>
+                      {title}
+                    </div>
+                    {quiz ? (
+                      <div className="flex flex-wrap justify-end items-center gap-2 text-sm text-text-muted">
+                        <div className="px-2 py-1 bg-success-muted text-success-base text-nowrap">{quiz.questions} Questions</div>
+                        <div className="px-2 py-1 bg-error-muted text-error-base text-nowrap">{quiz.minutes} Minutes</div>
+                      </div>
+                    ) : (
+                      <div className="icon-lock group-hover:text-primary-hover"></div>
+                    )}
                   </div>
-                  <div className="icon-lock group-hover:text-primary-hover"></div>
-                </div>
-              ))}
+                );
+              })}
             </>
           </div>
         ))}
