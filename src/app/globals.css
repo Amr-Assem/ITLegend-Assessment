@@ -1,12 +1,21 @@
 @import "tailwindcss";
+@font-face {
+  font-family: "icomoon";
+  src: url("/fonts/icomoon.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
+/* -------------------------------- Variables ------------------------------- */
 :root {
-  --primary-base: #63b29e;
+  --primary-base: #1ab69d;
   --primary-hover: #4a8677;
   --text-base: #181818;
   --text-muted: #808080;
   --background: #ffffff;
   --border: #e5e5e5;
+  --icons-font: "icomoon";
 }
 
 @theme inline {
@@ -20,10 +29,11 @@
   --font-heading: var(--heading-font);
 }
 
+/* ------------------------------- Base Style ------------------------------- */
 body {
   background: var(--background);
   color: var(--text-muted);
-  font-family: var(--font-sans);
+  font-family: var(--body-font);
 }
 
 h1,
@@ -33,5 +43,14 @@ h4,
 h5,
 h6 {
   color: var(--text-base);
-  font-family: var(--font-heading);
+  font-family: var(--heading-font);
+}
+
+/* ---------------------------------- Icons --------------------------------- */
+[class^="icon-"] {
+  font-family: var(--icons-font) !important;
+}
+
+.icon-angle-right::before {
+  content: "\f105";
 }

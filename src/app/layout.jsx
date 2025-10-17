@@ -4,12 +4,13 @@ import "./globals.css";
 const bodyFont = Poppins({
   variable: "--body-font",
   subsets: ["latin"],
-  weight: ["500"]
+  weight: ["400", "500", "600" ,"700"],
 });
 
 const headingFont = League_Spartan({
   variable: "--heading-font",
   subsets: ["latin"],
+  weight: ["400", "500", "600" ,"700"],
 });
 
 export const metadata = {
