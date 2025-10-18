@@ -4,7 +4,7 @@ import TitleSection from "./_sections/TitleSection";
 import VideoSection from "./_sections/VideoSection";
 import CommentsSection from "./_sections/CommentsSection";
 import ContentSection from "./_sections/ContentSection";
-import VideoPlayer from "@/components/VideoPlayer";
+import VideoPlayer from "./_sections/VideoPlayer";
 
 export default function CourseDetailsPage() {
   return (
