@@ -7,7 +7,7 @@ export default function QuestionsModal({ isOpen, onClose, courseData }) {
 
   // Load draft on mount
   useEffect(() => {
-    const saved = localStorage.getItem(STORAGE_KEY);
+    const saved = sessionStorage.getItem(STORAGE_KEY);
     if (saved !== null) setText(saved);
   }, []);
 
@@ -23,17 +23,17 @@ export default function QuestionsModal({ isOpen, onClose, courseData }) {
   const handleChange = (e) => {
     const value = e.target.value;
     setText(value);
-    localStorage.setItem(STORAGE_KEY, value);
+    sessionStorage.setItem(STORAGE_KEY, value);
   };
 
   const handleClose = () => {
-    localStorage.setItem(STORAGE_KEY, text);
+    sessionStorage.setItem(STORAGE_KEY, text);
     onClose();
   };
 
   const handleSubmit = () => {
     if (text.trim() === "") return;
-    localStorage.removeItem(STORAGE_KEY);
+    sessionStorage.removeItem(STORAGE_KEY);
     setText("");
   };
 
