@@ -23,7 +23,49 @@ export const courseData = {
             items: [
                 { title: "Introduction", path: "/sample.pdf" },
                 { title: "Course Overview", path: "/sample.pdf" },
-                { title: "Course Overview", quiz: { questions: 0, minutes: 10 }, path: "/sample.pdf" },
+                {
+                    title: "Course Overview",
+                    quiz: {
+                        questions: 5,
+                        minutes: 10,
+                        quizData: {
+                            id: "quiz-1",
+                            title: "Course Overview Quiz",
+                            questions: [
+                                {
+                                    id: 1,
+                                    question: "What is the primary goal of SEO?",
+                                    options: ["Increase website traffic", "Improve user experience", "Boost search rankings", "All of the above"],
+                                    correctAnswer: 3
+                                },
+                                {
+                                    id: 2,
+                                    question: "Which HTML tag is most important for SEO?",
+                                    options: ["<div>", "<title>", "<span>", "<table>"],
+                                    correctAnswer: 1
+                                },
+                                {
+                                    id: 3,
+                                    question: "What does SERP stand for?",
+                                    options: ["Search Engine Results Page", "Server Engine Response Protocol", "Site Engine Rank Position", "Search Entry Ranking Process"],
+                                    correctAnswer: 0
+                                },
+                                {
+                                    id: 4,
+                                    question: "How often should you update your website content?",
+                                    options: ["Never", "Once a year", "Regularly", "Only when broken"],
+                                    correctAnswer: 2
+                                },
+                                {
+                                    id: 5,
+                                    question: "What is a backlink?",
+                                    options: ["A broken link", "A link from another website to yours", "A link to your homepage", "A redirect link"],
+                                    correctAnswer: 1
+                                }
+                            ]
+                        }
+                    },
+                },
                 { title: "Course Exercise / Reference Files", path: "/sample.pdf" },
                 { title: "Code Editor Installation (Optional if you have one)", path: "/sample.pdf" },
                 { title: "Embedding PHP in HTML", path: "/sample.pdf" },
@@ -37,7 +79,31 @@ export const courseData = {
             items: [
                 { title: "Defining Functions", path: "/sample.pdf" },
                 { title: "Function Parameters", path: "/sample.pdf" },
-                { title: "Return Values From Functions", quiz: { questions: 2, minutes: 15 }, path: "/sample.pdf" },
+                {
+                    title: "Return Values From Functions",
+                    quiz: {
+                        questions: 2,
+                        minutes: 15,
+                        quizData: {
+                            id: "quiz-2",
+                            title: "Functions Quiz",
+                            questions: [
+                                {
+                                    id: 1,
+                                    question: "What keyword is used to return a value from a function?",
+                                    options: ["return", "output", "result", "send"],
+                                    correctAnswer: 0
+                                },
+                                {
+                                    id: 2,
+                                    question: "Can a function return multiple values directly?",
+                                    options: ["Yes, always", "No, never", "Only with arrays/objects", "Only in strict mode"],
+                                    correctAnswer: 2
+                                }
+                            ]
+                        }
+                    },
+                },
                 { title: "Global Variable and Scope", path: "/sample.pdf" },
                 { title: "Newer Way of Creating a Constant", path: "/sample.pdf" },
                 { title: "Constants", path: "/sample.pdf" },
@@ -51,7 +117,31 @@ export const courseData = {
             items: [
                 { title: "Defining Functions", path: "/sample.pdf" },
                 { title: "Function Parameters", path: "/sample.pdf" },
-                { title: "Return Values From Functions", quiz: { questions: 2, minutes: 15 }, path: "/sample.pdf" },
+                {
+                    title: "Return Values From Functions",
+                    quiz: {
+                        questions: 2,
+                        minutes: 15,
+                        quizData: {
+                            id: "quiz-2",
+                            title: "Functions Quiz",
+                            questions: [
+                                {
+                                    id: 1,
+                                    question: "What keyword is used to return a value from a function?",
+                                    options: ["return", "output", "result", "send"],
+                                    correctAnswer: 0
+                                },
+                                {
+                                    id: 2,
+                                    question: "Can a function return multiple values directly?",
+                                    options: ["Yes, always", "No, never", "Only with arrays/objects", "Only in strict mode"],
+                                    correctAnswer: 2
+                                }
+                            ]
+                        }
+                    },
+                },
                 { title: "Global Variable and Scope", path: "/sample.pdf" },
                 { title: "Newer Way of Creating a Constant", path: "/sample.pdf" },
                 { title: "Constants", path: "/sample.pdf" },

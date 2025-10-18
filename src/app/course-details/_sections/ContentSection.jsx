@@ -1,12 +1,17 @@
 "use client";
 import React, { useState } from "react";
 import PdfViewerModal from "@/components/PdfViewerModal";
+import QuizModal from "@/components/QuizModal";
 
 export default function ContentSection({ courseData }) {
   const [pdfModal, setPdfModal] = useState({
     isOpen: false,
     path: "",
     title: "",
+  });
+  const [quizModal, setQuizModal] = useState({
+    isOpen: false,
+    quizData: null,
   });
   return (
     <div id="content-section" className="bg-background order-2 row-span-3">
@@ -61,7 +66,9 @@ export default function ContentSection({ courseData }) {
                 const path = isString ? undefined : item.path;
 
                 const handleClick = () => {
-                  if (path) {
+                  if (quiz && quiz.quizData) {
+                    setQuizModal({ isOpen: true, quizData: { ...quiz.quizData, minutes: quiz.minutes } });
+                  } else if (path) {
                     setPdfModal({ isOpen: true, path, title });
                   }
                 };
@@ -72,7 +79,7 @@ export default function ContentSection({ courseData }) {
                     key={index}>
                     <div
                       className={`text-sm text-text-base group-hover:text-primary-hover ${
-                        path ? "cursor-pointer" : "cursor-default"
+                        path || (quiz && quiz.quizData) ? "cursor-pointer" : "cursor-default"
                       }`}
                       onClick={handleClick}>
                       <span className="icon-chapter pr-2"></span>
@@ -104,6 +111,13 @@ export default function ContentSection({ courseData }) {
         pdfPath={pdfModal.path}
         title={pdfModal.title}
         onClose={() => setPdfModal({ isOpen: false, path: "", title: "" })}
+      />
+
+      {/* Quiz Modal */}
+      <QuizModal
+        isOpen={quizModal.isOpen}
+        quizData={quizModal.quizData}
+        onClose={() => setQuizModal({ isOpen: false, quizData: null })}
       />
     </div>
   );

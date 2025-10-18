@@ -151,3 +151,7 @@ h6 {
 .icon-close::before {
   content: "\E948";
 }
+
+.icon-angle-left::before {
+  content: "\F104";
+}
