@@ -21,12 +21,12 @@ export const courseData = {
             description:
                 "Advanced story telling techniques for writers: Personas, Characters & Plots",
             items: [
-                { title: "Introduction" },
-                { title: "Course Overview" },
-                { title: "Course Overview", quiz: { questions: 0, minutes: 10 } },
-                { title: "Course Exercise / Reference Files" },
-                { title: "Code Editor Installation (Optional if you have one)" },
-                { title: "Embedding PHP in HTML" },
+                { title: "Introduction", path: "/sample.pdf" },
+                { title: "Course Overview", path: "/sample.pdf" },
+                { title: "Course Overview", quiz: { questions: 0, minutes: 10 }, path: "/sample.pdf" },
+                { title: "Course Exercise / Reference Files", path: "/sample.pdf" },
+                { title: "Code Editor Installation (Optional if you have one)", path: "/sample.pdf" },
+                { title: "Embedding PHP in HTML", path: "/sample.pdf" },
             ],
         },
         {
@@ -35,12 +35,12 @@ export const courseData = {
             description:
                 "Advanced story telling techniques for writers: Personas, Characters & Plots",
             items: [
-                { title: "Defining Functions" },
-                { title: "Function Parameters" },
-                { title: "Return Values From Functions", quiz: { questions: 2, minutes: 15 } },
-                { title: "Global Variable and Scope" },
-                { title: "Newer Way of Creating a Constant" },
-                { title: "Constants" },
+                { title: "Defining Functions", path: "/sample.pdf" },
+                { title: "Function Parameters", path: "/sample.pdf" },
+                { title: "Return Values From Functions", quiz: { questions: 2, minutes: 15 }, path: "/sample.pdf" },
+                { title: "Global Variable and Scope", path: "/sample.pdf" },
+                { title: "Newer Way of Creating a Constant", path: "/sample.pdf" },
+                { title: "Constants", path: "/sample.pdf" },
             ],
         },
         {
@@ -49,12 +49,12 @@ export const courseData = {
             description:
                 "Advanced story telling techniques for writers: Personas, Characters & Plots",
             items: [
-                { title: "Defining Functions" },
-                { title: "Function Parameters" },
-                { title: "Return Values From Functions", quiz: { questions: 2, minutes: 15 } },
-                { title: "Global Variable and Scope" },
-                { title: "Newer Way of Creating a Constant" },
-                { title: "Constants" },
+                { title: "Defining Functions", path: "/sample.pdf" },
+                { title: "Function Parameters", path: "/sample.pdf" },
+                { title: "Return Values From Functions", quiz: { questions: 2, minutes: 15 }, path: "/sample.pdf" },
+                { title: "Global Variable and Scope", path: "/sample.pdf" },
+                { title: "Newer Way of Creating a Constant", path: "/sample.pdf" },
+                { title: "Constants", path: "/sample.pdf" },
             ],
         },
     ],

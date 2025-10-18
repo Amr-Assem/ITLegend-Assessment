@@ -1,6 +1,13 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
+import PdfViewerModal from "@/components/PdfViewerModal";
 
 export default function ContentSection({ courseData }) {
+  const [pdfModal, setPdfModal] = useState({
+    isOpen: false,
+    path: "",
+    title: "",
+  });
   return (
     <div id="content-section" className="bg-background order-2 row-span-3">
       <h3 className="text-2xl font-semibold text-text-base mb-6">
@@ -51,18 +58,34 @@ export default function ContentSection({ courseData }) {
                 const isString = typeof item === "string";
                 const title = isString ? item : item.title;
                 const quiz = isString ? undefined : item.quiz;
+                const path = isString ? undefined : item.path;
+
+                const handleClick = () => {
+                  if (path) {
+                    setPdfModal({ isOpen: true, path, title });
+                  }
+                };
+
                 return (
                   <div
                     className="flex justify-between items-center gap-2 border-b border-border py-3 group transition-colors"
                     key={index}>
-                    <div className="text-sm text-text-base group-hover:text-primary-hover cursor-default">
+                    <div
+                      className={`text-sm text-text-base group-hover:text-primary-hover ${
+                        path ? "cursor-pointer" : "cursor-default"
+                      }`}
+                      onClick={handleClick}>
                       <span className="icon-chapter pr-2"></span>
                       {title}
                     </div>
                     {quiz ? (
                       <div className="flex flex-wrap justify-end items-center gap-2 text-sm text-text-muted">
-                        <div className="px-2 py-1 bg-success-muted text-success-base text-nowrap">{quiz.questions} Questions</div>
-                        <div className="px-2 py-1 bg-error-muted text-error-base text-nowrap">{quiz.minutes} Minutes</div>
+                        <div className="px-2 py-1 bg-success-muted text-success-base text-nowrap">
+                          {quiz.questions} Questions
+                        </div>
+                        <div className="px-2 py-1 bg-error-muted text-error-base text-nowrap">
+                          {quiz.minutes} Minutes
+                        </div>
                       </div>
                     ) : (
                       <div className="icon-lock group-hover:text-primary-hover"></div>
@@ -74,6 +97,14 @@ export default function ContentSection({ courseData }) {
           </div>
         ))}
       </div>
+
+      {/* PDF Viewer Modal */}
+      <PdfViewerModal
+        isOpen={pdfModal.isOpen}
+        pdfPath={pdfModal.path}
+        title={pdfModal.title}
+        onClose={() => setPdfModal({ isOpen: false, path: "", title: "" })}
+      />
     </div>
   );
 }
