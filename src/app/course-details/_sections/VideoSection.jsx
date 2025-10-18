@@ -1,21 +1,37 @@
-import React from "react";
+"use client";
+import Link from "next/link";
+import React, { useState } from "react";
+import LeaderboardModal from "@/components/LeaderboardModal";
+import QuestionsModal from "@/components/QuestionsModal";
 
 export default function VideoSection({ courseData }) {
+  const [openLeaderboard, setOpenLeaderboard] = useState(false);
+  const [openQuestions, setOpenQuestions] = useState(false);
+
+  const iconButtonClass =
+    "flex items-center justify-center w-10 h-10 border border-border hover:bg-primary-base hover:text-background cursor-pointer rounded-full";
+
   return (
     <div className="bg-background order-3">
       {/* Icon Buttons Below Video */}
       <div className="flex gap-3 pb-4">
-        <button className="flex items-center justify-center w-10 h-10 border border-border hover:bg-primary-base hover:text-background cursor-pointer rounded-full">
-          <span className="icon-facebook"></span>
+        <Link href="#content-section" className={iconButtonClass}>
+          <span className="icon-curriculum"></span>
+        </Link>
+        <Link href="#comments-section" className={iconButtonClass}>
+          <span className="icon-comments"></span>
+        </Link>
+        <button
+          type="button"
+          className={iconButtonClass}
+          onClick={() => setOpenLeaderboard(true)}>
+          <span className="icon-leaderboard"></span>
         </button>
-        <button className="flex items-center justify-center w-10 h-10 border border-border hover:bg-primary-base hover:text-background cursor-pointer rounded-full">
-          <span className="icon-twitter"></span>
-        </button>
-        <button className="flex items-center justify-center w-10 h-10 border border-border hover:bg-primary-base hover:text-background cursor-pointer rounded-full">
-          <span className="icon-linkedin"></span>
-        </button>
-        <button className="flex items-center justify-center w-10 h-10 border border-border hover:bg-primary-base hover:text-background cursor-pointer rounded-full">
-          <span className="icon-youtube"></span>
+        <button
+          type="button"
+          className={iconButtonClass}
+          onClick={() => setOpenQuestions(true)}>
+          <span className="icon-questions"></span>
         </button>
       </div>
 
@@ -38,7 +54,7 @@ export default function VideoSection({ courseData }) {
 
             <div className="flex items-center justify-between py-3 mx-3 border-b border-border">
               <div className="flex items-center gap-3">
-                <span className="icon-lessons"></span>
+                <span className="icon-lessons text-text-base"></span>
                 <span className="text-sm">Lessons:</span>
               </div>
               <span className="text-text-base font-medium text-sm">
@@ -81,7 +97,7 @@ export default function VideoSection({ courseData }) {
 
             <div className="flex items-center justify-between py-3 mx-3 border-b border-border">
               <div className="flex items-center gap-3">
-                <span className="icon-lessons"></span>
+                <span className="icon-lessons text-text-base"></span>
                 <span className="text-sm">Lessons:</span>
               </div>
               <span className="text-text-base font-medium text-sm">
@@ -110,6 +126,21 @@ export default function VideoSection({ courseData }) {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Modals */}
+      <div id="leaderboard-modal">
+        <LeaderboardModal
+          isOpen={openLeaderboard}
+          onClose={() => setOpenLeaderboard(false)}
+        />
+      </div>
+      <div id="questions-modal">
+        <QuestionsModal
+          isOpen={openQuestions}
+          onClose={() => setOpenQuestions(false)}
+          courseData={courseData}
+        />
       </div>
     </div>
   );

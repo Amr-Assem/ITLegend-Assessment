@@ -11,6 +11,7 @@
 :root {
   --primary-base: #1ab69d;
   --primary-hover: #179e88;
+  --primary-muted: #1ab69c12;
   --text-base: #181818;
   --text-muted: #808080;
   --background: #ffffff;
@@ -25,6 +26,7 @@
 @theme inline {
   --color-primary-base: var(--primary-base);
   --color-primary-hover: var(--primary-hover);
+  --color-primary-muted: var(--primary-muted);
   --color-text-base: var(--text-base);
   --color-text-muted: var(--text-muted);
   --color-background: var(--background);
@@ -42,6 +44,10 @@ body {
   background: var(--background);
   color: var(--text-muted);
   font-family: var(--body-font);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -69,7 +75,7 @@ h6 {
 @media (min-width: 1200px) {
   .course__grid {
     grid-template-columns: 65% auto;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
   }
 }
 
@@ -103,7 +109,7 @@ h6 {
 }
 
 .icon-lessons::before {
-  content: url("/icons/lessons.svg");
+  content: "\E917";
 }
 
 .icon-enrolled::before {
@@ -124,4 +130,24 @@ h6 {
 
 .icon-lock::before {
   content: "\E943";
+}
+
+.icon-curriculum::before {
+  content: "\E940";
+}
+
+.icon-comments::before {
+  content: "\E91B";
+}
+
+.icon-questions::before {
+  content: "\E904";
+}
+
+.icon-leaderboard::before {
+  content: "\E914";
+}
+
+.icon-close::before {
+  content: "\E948";
 }

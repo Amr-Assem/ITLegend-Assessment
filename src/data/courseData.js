@@ -1,7 +1,8 @@
 export const courseData = {
     // Course information
     title: "Starting SEO as your Home-Based Business",
-    videoUrl: "",
+    videoUrl: "https://youtu.be/PICj5tr9hcc",
+    videoThumbnail: "/video.jpg",
     completionProgress: 63,
 
     // Course Materials

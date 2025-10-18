@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ContentSection({ courseData }) {
   return (
-    <div className="bg-background order-2 row-span-3">
+    <div id="content-section" className="bg-background order-2 row-span-3">
       <h3 className="text-2xl font-semibold text-text-base mb-6">
         Topics for This Course
       </h3>
